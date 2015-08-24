@@ -1,0 +1,25 @@
+<%= render 'form_errors.html.erb', object: @candidate  %>
+<div class= candidate-div>
+<h2>Registration</h2>
+<%= simple_form_for @candidate, url: candidates_path do |form| %>
+  <%= form.input :first_name, label: 'Name', placeholder: 'First Name', error: false %>
+  <%= form.input :last_name, label: false, placeholder: 'Last Name', error: false %>
+  <%= form.input :email, error: false %>
+  <%= form.input :phone, error: false %>
+  <%= form.input :date_available, as: :date, html5: true %>
+  <%= form.input :education do %>
+    <%= form.select :education, education_types_for_select %>
+  <% end %>
+  <%= form.input :languages, label: 'Main spoken language' do %>
+    <%= form.select :languages, languages_for_select%>
+  <% end %>
+  <%= form.input :work_type, label: 'Preferred Type of Work' do %>
+    <%= form.select :work_type, work_types_for_select %>
+  <% end %>
+  <%= form.input :shifts, label: 'Preferred Shift' do %>
+    <%= form.select :shifts, shifts_for_select %>
+  <% end %>
+
+  <%= form.button :submit, 'Save My Info' %>
+<% end %>
+</div>

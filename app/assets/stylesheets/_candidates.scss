@@ -1,0 +1,54 @@
+div.candidate-div {
+  @include outer-container;
+
+  form.new_candidate {
+    @include span-columns(7);
+    clear: both;
+
+    div.input {
+      &.boolean {
+        @include shift(3 of 7);
+        @include span-columns(4 of 7);
+
+        input.boolean {
+          display: inline-block;
+          margin-right: $base-spacing / 2;
+          width: auto;
+        }
+
+        label {
+          align-items: center;
+          display: flex;
+          text-align: left;
+          width: 100%;
+        }
+      }
+
+      input {
+        @include span-columns(4 of 7);
+      }
+
+      label {
+        @include span-columns(3 of 7);
+      }
+
+      input#candidate_last_name {
+        @include shift(3);
+      }
+
+      label {
+        text-align: right;
+        text-transform: uppercase;
+      }
+
+      div.input.btn {
+        @include shift(3 of 7);
+        margin-right: $base-spacing / 2;
+      }
+
+      select {
+        @include span-columns(4 of 7);
+      }
+    }
+  }
+}
