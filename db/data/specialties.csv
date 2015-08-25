@@ -1,0 +1,16 @@
+name,bullhorn_id,category_id
+Accounting/Payroll,1374556,1
+Administrative Assistant,1374555,1
+Clerical Support,1374558,1
+Data Entry,1384557,1
+Customer Service,1374559,2
+Help Desk,1374560,2
+Sales (Tele Sales),1374562,2
+Tech Support,1374561,2
+Assembly/Production,1374549,3
+Distribution/Warehouse,1374550,3
+General Labor,1374548,3
+Forklift Worker,1374553,4
+Installation/Repair,1374554,4
+Machinist,1374551,4
+Welders,1374552,4

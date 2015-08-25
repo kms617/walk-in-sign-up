@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825152001) do
+ActiveRecord::Schema.define(version: 20150825212146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,8 +39,7 @@ ActiveRecord::Schema.define(version: 20150825152001) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.string   "parent_group"
-    t.string   "bullhorn_id"
+    t.integer  "bullhorn_id"
   end
 
   create_table "categorizations", force: :cascade do |t|
@@ -65,5 +64,13 @@ ActiveRecord::Schema.define(version: 20150825152001) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+
+  create_table "specialties", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.integer  "category_id"
+    t.string   "bullhorn_id"
+  end
 
 end

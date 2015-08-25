@@ -15,10 +15,4 @@ module ApplicationHelper
   def shifts_for_select
     ["Any", "Days Only", "Afternoons Only", "Midnights Only", "Days and Afternoons", "Afternoons and Nights", "Days and Nights"]
   end
-
-  def categories_for_select(parent)
-    categories = Categories.find_by(parent_group: parent)
-    categories.ordered.map { |category| [category.name, category.bullhorn_id]}
-  end
-
 end

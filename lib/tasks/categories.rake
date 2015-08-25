@@ -25,7 +25,6 @@ namespace :data do
 
       def create
         category = Category.create(name: @attrs[:name],
-                                 parent_group: @attrs[:parent_group],
                                  bullhorn_id: @attrs[:bullhorn_id]
                                  )
         category
