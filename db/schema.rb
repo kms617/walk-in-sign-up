@@ -39,14 +39,7 @@ ActiveRecord::Schema.define(version: 20150825212146) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
-    t.integer  "bullhorn_id"
-  end
-
-  create_table "categorizations", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "candidate_id"
-    t.integer  "category_id"
+    t.string   "bullhorn_id"
   end
 
   create_table "delayed_jobs", force: :cascade do |t|
@@ -65,12 +58,22 @@ ActiveRecord::Schema.define(version: 20150825212146) do
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
+  create_table "specializations", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "specialty_id"
+    t.integer  "candidate_id"
+  end
+
+  add_index "specializations", ["candidate_id"], name: "index_specializations_on_candidate_id", using: :btree
+  add_index "specializations", ["specialty_id"], name: "index_specializations_on_specialty_id", using: :btree
+
   create_table "specialties", force: :cascade do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.integer  "bullhorn_id"
     t.integer  "category_id"
-    t.string   "bullhorn_id"
   end
 
 end

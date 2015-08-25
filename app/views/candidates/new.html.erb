@@ -21,7 +21,8 @@
   <%= form.input :shifts, label: 'Preferred Shift' do %>
     <%= form.select :shifts, shifts_for_select %>
   <% end %>
-  <%= form.association :categories, collection: Category.order(:parent_group), label: "Work I'm Interested In:"%>
+  <%= form.association :categories, as: :check_boxes, label: "Work I'm Interested In:"%>
+  <%= form.association :specialties, as: :check_boxes, label: "Specialties:" %>
 
   <%= form.input :eligible, as: :boolean, value: '1', label: 'I am 18 years old or older and eligible to work in the United States.'%>
   <%= form.button :submit, 'Register' %>

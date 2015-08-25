@@ -3,8 +3,8 @@ class CreateSpecialties < ActiveRecord::Migration
     create_table :specialties do |t|
       t.timestamps
       t.string :name
+      t.integer :bullhorn_id
       t.integer :category_id
-      t.string :bullhorn_id
     end
   end
 end

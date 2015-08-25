@@ -3,7 +3,7 @@ class CreateCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.timestamps
       t.string :name
-      t.integer :bullhorn_id
+      t.string :bullhorn_id
     end
   end
 end
