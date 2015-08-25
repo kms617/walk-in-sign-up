@@ -15,6 +15,7 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :work_type
       t.string :shifts
       t.string :category
+      t.boolean :eligible, default: true
     end
   end
 end

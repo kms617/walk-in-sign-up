@@ -1,0 +1,9 @@
+div.home {
+  background-color: $dark-gray;
+  height: 100%;
+  iframe {
+    margin-left: 50px;
+    margin-top: 50px;
+    border-color: $dark-gray;
+  }
+}

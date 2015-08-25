@@ -9,6 +9,8 @@
 
 @import 'layout/layout';
 @import 'candidates';
+@import 'layout/topbar';
+@import 'home';
 
 $blue: rgba(#00A3DA, 0.82);
 
@@ -19,6 +21,7 @@ $blue: rgba(#00A3DA, 0.82);
 
 html, body, main {
   height: 100%;
+  padding: 0 0 0 0;
 }
 
 body.home {

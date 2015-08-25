@@ -1,6 +1,20 @@
 div.candidate-div {
   @include outer-container;
 
+  h2 {
+    margin-left: 75px;
+    color: $blue;
+    font-size: 30px;
+    padding-top: 25px;
+  }
+
+  h3 {
+    margin-left: 75px;
+    margin-bottom: 25px;
+    color: #6E9082;
+    font-size: 25px;
+  }
+
   form.new_candidate {
     @include span-columns(7);
     clear: both;
@@ -12,7 +26,7 @@ div.candidate-div {
 
         input.boolean {
           display: inline-block;
-          margin-right: $base-spacing / 2;
+          margin-right: $base-spacing;
           width: auto;
         }
 
@@ -21,6 +35,7 @@ div.candidate-div {
           display: flex;
           text-align: left;
           width: 100%;
+          font-size: 75%;
         }
       }
 
@@ -30,6 +45,7 @@ div.candidate-div {
 
       label {
         @include span-columns(3 of 7);
+        color: $blue;
       }
 
       input#candidate_last_name {
@@ -41,14 +57,12 @@ div.candidate-div {
         text-transform: uppercase;
       }
 
-      div.input.btn {
-        @include shift(3 of 7);
-        margin-right: $base-spacing / 2;
-      }
-
       select {
         @include span-columns(4 of 7);
       }
+    }
+    input.btn {
+      @include shift(3 of 7);
     }
   }
 }

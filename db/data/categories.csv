@@ -1,0 +1,16 @@
+name,parent_group,bullhorn_id
+General Labor,Industrial,1
+Assembly/Production,Industrial,2
+Distribution/Warehouse,Industrial,3
+Machinist,Skilled Trades,4
+Welder,Skilled Trades,5
+Forklift Operator,Skilled Trades,6
+Installation/Repari,Skilled Trades,7
+Administrative Assistant,Administrative,8
+Accounting/Payroll,Administrative,9
+Data Entry,Administrative,10
+Clerical Support,Administrative,11
+Customer Service,Contact Center,12
+Help Desk,Contact Center,13
+Tech Support,Contact Center,14
+Sales/Tele Sales,Contact Center,15

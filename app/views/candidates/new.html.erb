@@ -1,6 +1,8 @@
+<%= render "topbar" %>
 <%= render 'form_errors.html.erb', object: @candidate  %>
 <div class= candidate-div>
-<h2>Registration</h2>
+<h2>See what's humanly possible.</h2>
+<h3>Register with us today.</h3>
 <%= simple_form_for @candidate, url: candidates_path do |form| %>
   <%= form.input :first_name, label: 'Name', placeholder: 'First Name', error: false %>
   <%= form.input :last_name, label: false, placeholder: 'Last Name', error: false %>
@@ -20,6 +22,8 @@
     <%= form.select :shifts, shifts_for_select %>
   <% end %>
 
-  <%= form.button :submit, 'Save My Info' %>
+
+  <%= form.input :eligible, as: :boolean, value: '1', label: 'I am 18 years old or older and eligible to work in the United States.'%>
+  <%= form.button :submit, 'Register' %>
 <% end %>
 </div>

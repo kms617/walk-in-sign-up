@@ -29,7 +29,8 @@ class CandidatesController < ApplicationController
                                       :drug_screen,
                                       :work_type,
                                       :shifts,
-                                      :category
+                                      :category,
+                                      :eligible
                                       )
   end
 end

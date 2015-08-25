@@ -1,4 +1,7 @@
-<h1>Welcome to Manpower</h1>
-<%= content_tag(:iframe, nil, src: "https://www.youtube.com/embed/3JyC94DWJvg?list=LLc07ePEXiPDazZB4HulO3lQ") %>
-<p>Are you 18 or older and eligible to work in the United States?</p>
-<%= link_to 'Yes', new_candidate_path %> <%= link_to 'No', welcome_disclaimer_path %>
+<div class='home'>
+  <%= link_to new_candidate_path, data: { confirm: 'You must be 18 or older and eligible to work in the United States in order to continue.' } do %>
+    <%= image_tag('image1.png') %>
+    <% end %>
+  <br>
+    <%= content_tag(:iframe, nil, width: 650, height: 500, src: "https://www.youtube.com/embed/3JyC94DWJvg?list=LLc07ePEXiPDazZB4HulO3lQ") %>
+</div>
