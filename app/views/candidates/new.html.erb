@@ -21,8 +21,18 @@
   <%= form.input :shifts, label: 'Preferred Shift' do %>
     <%= form.select :shifts, shifts_for_select %>
   <% end %>
-  <%= form.association :categories, as: :check_boxes, label: "Work I'm Interested In:"%>
-  <%= form.association :specialties, as: :check_boxes, label: "Specialties:" %>
+  <div class="admin">
+    <%= form.association :specialties, collection: admin_specialties, as: :check_boxes, label: false %>
+  </div>
+  <div class="contact">
+    <%= form.association :specialties, collection: contact_specialties, as: :check_boxes, label: false %>
+  </div>
+  <div class="industrial">
+    <%= form.association :specialties, collection: industry_specialties, as: :check_boxes, label: false %>
+  </div>
+  <div class="trades">
+    <%= form.association :specialties, collection: trade_specialties, as: :check_boxes, label: false %>
+  </div>
 
   <%= form.input :eligible, as: :boolean, value: '1', label: 'I am 18 years old or older and eligible to work in the United States.'%>
   <%= form.button :submit, 'Register' %>

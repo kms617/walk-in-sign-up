@@ -15,4 +15,20 @@ module ApplicationHelper
   def shifts_for_select
     ["Any", "Days Only", "Afternoons Only", "Midnights Only", "Days and Afternoons", "Afternoons and Nights", "Days and Nights"]
   end
+
+  def admin_specialties
+    Specialty.where(category_id: 1).map { |specialty| [specialty.name]}
+  end
+
+  def contact_specialties
+    Specialty.where(category_id: 2).map { |specialty| [specialty.name]}
+  end
+
+  def industry_specialties
+    Specialty.where(category_id: 3).map { |specialty| [specialty.name]}
+  end
+
+  def trade_specialties
+    Specialty.where(category_id: 4).map { |specialty| [specialty.name]}
+  end
 end
