@@ -1,2 +1,6 @@
-<h2>Unfortunately, we are unable to place workers who are under 18 or do not have the legal right to work in the United States.</h2>
-  <%= link_to 'Back', root_path %>
+<%= render "topbar" %>
+<div class="disclaimer">
+<h1>Are you 18 or older and eligible to work in the United States?</h1>
+<br>
+<h2><%= link_to 'Yes', new_candidate_path %> | <%= link_to 'No', root_path, data: {confirm: 'Unfortunately, we are unable to place anyone who is under 18 or not eligible to work in the United States at this time.'} %></h2>
+</div>
