@@ -10,9 +10,3 @@ development: &default
 test:
   <<: *default
   database: info-kiosk_test
-
-  production:
-  <<: *default
-  database: info-kiosk_production
-  username: info-kiosk
-  password: <%= ENV['INFO-KIOSK_DATABASE_PASSWORD'] %>
