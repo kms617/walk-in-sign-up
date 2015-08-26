@@ -30,7 +30,8 @@ class CandidatesController < ApplicationController
                                       :work_type,
                                       :shifts,
                                       :category,
-                                      :eligible
+                                      :eligible,
+                                      :specialty_ids
                                       )
   end
 end
