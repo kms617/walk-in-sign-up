@@ -1,7 +1,6 @@
+<%= render "topbar" %>
 <div class='home'>
-  <%= link_to new_candidate_path, data: { confirm: 'You must be 18 or older and eligible to work in the United States in order to continue.' } do %>
-    <%= image_tag('image1.png') %>
-    <% end %>
-  <br>
-    <%= content_tag(:iframe, nil, width: 650, height: 500, src: "https://www.youtube.com/embed/3JyC94DWJvg?list=LLc07ePEXiPDazZB4HulO3lQ") %>
+  <span><h1>Welcome |</h1><h2>The Age of Options Has Begun</h1></span>
+  <%= image_tag('image1.png') %>
+    <h3>Please <%= link_to 'register', new_candidate_path %> with us to get started.</h3>
 </div>
