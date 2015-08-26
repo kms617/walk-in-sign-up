@@ -52,6 +52,10 @@ div.candidate-div {
         @include shift(3);
       }
 
+      select#candidate_specialty_ids {
+        font-size: 14px;
+      }
+
       label {
         text-align: right;
         text-transform: uppercase;
@@ -63,6 +67,19 @@ div.candidate-div {
     }
     input.btn {
       @include shift(3 of 7);
+    }
+
+    div.admin {
+
+      div.input.checkboxes {
+
+        &.checkbox {
+        label {
+          @include shift(4 of 7);
+        }
+        font-style: normal;
+      }
+    }
     }
   }
 }
