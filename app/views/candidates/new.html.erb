@@ -6,8 +6,10 @@
 <%= simple_form_for @candidate, url: candidates_path do |form| %>
   <%= form.input :first_name, label: 'Name', placeholder: 'First Name', error: false %>
   <%= form.input :last_name, label: false, placeholder: 'Last Name', error: false %>
-  <%= form.input :email, error: false %>
-  <%= form.input :phone, error: false %>
+  <%= form.input :email, placeholder: 'myemail@mail.com', error: false %>
+  <%= form.input :phone, placeholder: '555-5555', error: false %>
+  <%= form.input :zipcode, placeholder: '53202', error: false %>
+  <%= form.input :radius, placeholder: '20', label: 'Miles Willing to Travel', error: false %>
   <%= form.input :date_available, as: :date, html5: true %>
   <%= form.input :education do %>
     <%= form.select :education, education_types_for_select %>

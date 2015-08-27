@@ -31,7 +31,9 @@ class CandidatesController < ApplicationController
                                       :shifts,
                                       :category,
                                       :eligible,
-                                      :specialty_ids
+                                      :specialty_ids,
+                                      :zipcode,
+                                      :radius
                                       )
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825212146) do
+ActiveRecord::Schema.define(version: 20150827190006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20150825212146) do
     t.string   "shifts"
     t.string   "category"
     t.boolean  "eligible",         default: true
+    t.string   "zipcode",          default: "53202"
+    t.string   "radius"
   end
 
   create_table "categories", force: :cascade do |t|
